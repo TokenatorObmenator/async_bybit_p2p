@@ -166,4 +166,6 @@ async def main():
         await api.get_user_payment_types()
     )
 
+    await api.close_session()
+
 asyncio.run(main())
