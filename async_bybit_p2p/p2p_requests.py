@@ -12,7 +12,7 @@ class P2PRequests(P2PManager):
         :returns: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_CURRENT_BALANCE,
             params=kwargs
         )
@@ -24,7 +24,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_ACCOUNT_INFORMATION,
             params=kwargs
         )
@@ -43,7 +43,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_ADS_LIST,
             params=kwargs
         )
@@ -56,7 +56,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_AD_DETAILS,
             params=kwargs
         )
@@ -80,7 +80,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.UPDATE_AD,
             params=kwargs
         )
@@ -93,7 +93,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.REMOVE_AD,
             params=kwargs
         )
@@ -112,7 +112,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_ORDERS,
             params=kwargs
         )
@@ -131,7 +131,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_PENDING_ORDERS,
             params=kwargs
         )
@@ -145,7 +145,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_COUNTERPARTY_INFO,
             params=kwargs
         )
@@ -158,7 +158,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_ORDER_DETAILS,
             params=kwargs
         )
@@ -171,7 +171,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.RELEASE_ASSETS,
             params=kwargs
         )
@@ -186,7 +186,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.MARK_AS_PAID,
             params=kwargs
         )
@@ -201,7 +201,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_CHAT_MESSAGES,
             params=kwargs
         )
@@ -214,7 +214,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.UPLOAD_CHAT_FILE,
             params=kwargs
         )
@@ -231,7 +231,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.SEND_CHAT_MESSAGE,
             params=kwargs
         )
@@ -257,7 +257,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.POST_NEW_AD,
             params=kwargs
         )
@@ -274,7 +274,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_ONLINE_ADS,
             params=kwargs
         )
@@ -286,7 +286,7 @@ class P2PRequests(P2PManager):
         :return: Response dictionary
         """
 
-        return self.http_req_handler(
+        return self._request(
             method=P2PMethods.GET_USER_PAYMENT_TYPES,
             params=kwargs
         )
