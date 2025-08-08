@@ -158,7 +158,9 @@ async def main():
     print(await api.get_online_ads(
         tokenId="USDT",
         currencyId="RUB",
-        side="0"
+        side="0",
+        payment=["1", "377"],
+        vaMaker=True
     ))
 
     # 18. Get user payment

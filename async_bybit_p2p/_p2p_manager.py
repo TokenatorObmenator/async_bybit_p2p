@@ -158,22 +158,25 @@ class P2PManager:
 
         self._cast_dict_recursively(params, str_params, int_params)
 
-    def _cast_dict_recursively(
-        self,
-        dictionary,
-        str_params,
-        int_params
-    ):
+    def _cast_dict_recursively(self, dictionary, str_params, int_params):
         for key, value in dictionary.items():
             if isinstance(value, dict):
                 self._cast_dict_recursively(value, str_params, int_params)
-                continue
-
-            if key in str_params:
-                if not isinstance(value, str):
+            elif isinstance(value, list):
+                for i, item in enumerate(value):
+                    if isinstance(item, dict):
+                        self._cast_dict_recursively(item, str_params, int_params)
+                    else:
+                        if key in str_params and not isinstance(item, str):
+                            value[i] = str(item)
+                        elif key in int_params and not isinstance(item, int):
+                            value[i] = int(item)
+            elif isinstance(value, bool):
+                dictionary[key] = value
+            else:
+                if key in str_params and not isinstance(value, str):
                     dictionary[key] = str(value)
-            elif key in int_params:
-                if not isinstance(value, int):
+                elif key in int_params and not isinstance(value, int):
                     dictionary[key] = int(value)
 
     def _generate_payload(
