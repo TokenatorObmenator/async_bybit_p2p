@@ -160,6 +160,8 @@ class P2PManager:
 
     def _cast_dict_recursively(self, dictionary, str_params, int_params):
         for key, value in dictionary.items():
+            if value is None:
+                continue
             if isinstance(value, dict):
                 self._cast_dict_recursively(value, str_params, int_params)
             elif isinstance(value, list):

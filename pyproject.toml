@@ -1,6 +1,6 @@
 [project]
 name = "async_bybit_p2p"
-version = "1.0.3"
+version = "1.0.4"
 authors = [
   { name="Kirill Suvorov", email="herbalsomml@gmail.com" },
 ]

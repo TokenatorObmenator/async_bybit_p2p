@@ -1,2 +1,2 @@
 from .p2p import P2P
-VERSION = "1.0.3"
+VERSION = "1.0.4"
